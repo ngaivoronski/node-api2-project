@@ -17,6 +17,7 @@ function PostList(props) {
     return (
         <div>
         <h1>Posts</h1>
+        <button onClick={() => props.history.push('/addpost')}>Add a Post!</button>
         {posts.map(post => {
             return(
             <div style={{'border':'1px solid black'}} onClick={() => props.history.push(`/posts/${post.id}`)}>

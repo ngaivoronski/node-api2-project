@@ -4,6 +4,7 @@ import axios from 'axios';
 import './App.css';
 import PostList from './components/PostList';
 import Post from './components/Post';
+import AddPost from './components/AddPost';
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -21,6 +22,7 @@ function App() {
   return (
     <div className="App">
       <Route exact path="/" component={PostList} />
+      <Route exact path="/addpost" component={AddPost} />
       <Route
         path="/posts/:id"
         render={props => {

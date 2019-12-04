@@ -16,7 +16,6 @@ function AddPost(props) {
 
     const submitPost = e => {
         e.preventDefault();
-        console.log(newPost);
         setNewPost(defaultPost);
         axios.post('http://localhost:5000/api/posts', newPost)
         .then(props.history.push('/'))

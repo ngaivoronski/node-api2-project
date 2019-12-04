@@ -12,7 +12,7 @@ function PostList(props) {
         .catch(err => {
         console.log(err);
         })
-    },[]);
+    },[props]);
 
     return (
         <div>

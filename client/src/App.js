@@ -5,6 +5,7 @@ import './App.css';
 import PostList from './components/PostList';
 import Post from './components/Post';
 import AddPost from './components/AddPost';
+import AddComment from './components/AddComment';
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -27,6 +28,12 @@ function App() {
         path="/posts/:id"
         render={props => {
           return <Post {...props} />;
+        }}
+      />
+      <Route
+        path="/posts/:id/addcomment"
+        render={props => {
+          return <AddComment {...props} />;
         }}
       />
     </div>
